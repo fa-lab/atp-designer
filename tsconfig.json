@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types"],
+    "moduleResolution": "node",
+    "target": "ES6",
+    "lib": ["ES6", "DOM", "DOM.Iterable"],
+    "newLine": "LF",
+    "sourceMap": true,
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "isolatedModules": true,
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "types/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "lib/types/index.ts",
+    "lib/types/index.ts"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "atp-designer",
+  "version": "1.0.0",
+  "source": "index.html",
+  "repository": "https://github.com/fa-lab/atp-designer.git",
+  "author": "Tienpia <tienipia@forcs.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel"
+  },
+  "devDependencies": {
+    "@parcel/transformer-vue": "2.8.3",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "parcel": "^2.8.3",
+    "prettier": "^2.8.8",
+    "prettier-plugin-organize-attributes": "^0.0.5",
+    "prettier-plugin-vue": "^1.1.6",
+    "vue": "3.2.47"
+  },
+  "alias": {
+    "vue": {
+      "global": "Vue"
+    }
+  }
+}

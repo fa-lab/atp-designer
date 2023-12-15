@@ -1,0 +1,326 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-select: none;
+}
+
+table {
+  table-layout: fixed;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin: 0 auto;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #0000001a;
+}
+
+td:hover:not(.meta) {
+  border: 2px solid #000c;
+}
+
+td.br {
+  border-right: 1px solid #000 !important;
+}
+
+td.bb {
+  border-bottom: 1px solid #000 !important;
+}
+
+.bg-alt {
+  background-color: #3232321a;
+}
+
+#designer {
+  cursor: url("002-pen.799b56ba.png"), auto;
+}
+
+#designer.erase_mode {
+  cursor: url("001-eraser.ad39d146.png"), auto;
+}
+
+#designer.select_mode {
+  cursor: crosshair;
+}
+
+.ATPRow {
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -khtml-user-select: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ATPLabelBox {
+  width: 180px;
+  height: 30px;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  display: inline-block;
+}
+
+.ATPHeadBox {
+  width: 240px;
+  height: 30px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  display: inline-block;
+}
+
+.ATPHeadBox p {
+  text-align: left;
+}
+
+.ATPHeadBox.first {
+  border-left: 1px solid #000;
+  width: 180px !important;
+}
+
+.ATPBox {
+  width: 30px;
+  height: 30px;
+  border-bottom: 1px solid #0000001a;
+  border-right: 1px solid #0000001a;
+  display: inline-block;
+}
+
+.ATPSimBox {
+  width: 15px !important;
+  height: 15px !important;
+  border: 1px solid #0000001a !important;
+  margin: 3px !important;
+}
+
+.ATPBox:hover {
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.ATPBox.separate {
+  border-right: 1px solid #000 !important;
+}
+
+.ATPBox.last {
+  border-bottom: 1px solid #000 !important;
+}
+
+.selected[led_color] {
+  cursor: move;
+  border: 2px dashed #000 !important;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: .2;
+  }
+
+  40% {
+    opacity: .4;
+  }
+
+  60% {
+    opacity: .6;
+  }
+
+  80% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+[led_bright="1"] {
+  opacity: .2;
+}
+
+[led_bright="2"] {
+  opacity: .25;
+}
+
+[led_bright="3"] {
+  opacity: .33;
+}
+
+[led_bright="4"] {
+  opacity: .38;
+}
+
+[led_bright="5"] {
+  opacity: .43;
+}
+
+[led_bright="6"] {
+  opacity: .48;
+}
+
+[led_bright="7"] {
+  opacity: .51;
+}
+
+[led_bright="8"] {
+  opacity: .55;
+}
+
+[led_bright="9"] {
+  opacity: .58;
+}
+
+[led_bright="10"] {
+  opacity: .61;
+}
+
+[led_bright="11"] {
+  opacity: .63;
+}
+
+[led_bright="12"] {
+  opacity: .66;
+}
+
+[led_bright="13"] {
+  opacity: .68;
+}
+
+[led_bright="14"] {
+  opacity: .71;
+}
+
+[led_bright="15"] {
+  opacity: .73;
+}
+
+[led_bright="16"] {
+  opacity: .76;
+}
+
+[led_bright="17"] {
+  opacity: .78;
+}
+
+[led_bright="18"] {
+  opacity: .81;
+}
+
+[led_bright="19"] {
+  opacity: .83;
+}
+
+[led_bright="20"] {
+  opacity: .85;
+}
+
+[led_bright="21"] {
+  opacity: .87;
+}
+
+[led_bright="22"] {
+  opacity: .88;
+}
+
+[led_bright="23"] {
+  opacity: .9;
+}
+
+[led_bright="24"] {
+  opacity: .93;
+}
+
+[led_bright="25"] {
+  opacity: .94;
+}
+
+[led_bright="26"] {
+  opacity: .95;
+}
+
+[led_bright="27"] {
+  opacity: .96;
+}
+
+[led_bright="28"] {
+  opacity: .97;
+}
+
+[led_bright="29"] {
+  opacity: .98;
+}
+
+[led_bright="30"] {
+  opacity: .99;
+}
+
+[led_bright="31"] {
+  opacity: 1;
+}
+
+[led_color="r"] {
+  color: #fff;
+  background-color: red;
+}
+
+[led_color="g"] {
+  background-color: #0f0;
+}
+
+[led_color="b"] {
+  color: #fff;
+  background-color: #00f;
+}
+
+[led_color="rg"] {
+  background-color: #ff0;
+}
+
+[led_color="rb"] {
+  background-color: #f0f;
+}
+
+[led_color="gb"] {
+  background-color: #0ff;
+}
+
+[led_color="rgb"] {
+  background-color: #eee;
+}
+
+#color_pallet {
+  vertical-align: middle;
+  text-align: center;
+  height: 48px;
+  width: 48px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  position: absolute;
+}
+
+#color_pallet p {
+  height: 48px;
+  width: 48px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 48px;
+  position: absolute;
+}
+
+#select_pallet {
+  height: 0;
+  width: 0;
+  z-index: -1;
+  border: 1px solid #000 !important;
+  position: absolute !important;
+}
+
+/*# sourceMappingURL=index.71d68a1e.css.map */

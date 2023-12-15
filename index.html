@@ -1,254 +1,37 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control" />
+    <meta content="no-cache" http-equiv="Pragma" />
+    <meta content="0" http-equiv="Expires" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+      rel="stylesheet" />
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+    <link href="atp.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      body {
+        font-family: tahoma, verdana, helvetica;
+        font-size: 0.8em;
+        padding: 10px;
+      }
+    </style>
+    <title>ATP Designer</title>
+  </head>
 
-	<link rel="stylesheet" type="text/css" href="atp.css" />
-	<style type="text/css">
-		body {
-			font-family: tahoma, verdana, helvetica;
-			font-size: 0.8em;
-			padding: 10px;
-		}
-	</style>
-	<title>ATP Designer</title>
-</head>
+  <body oncontextmenu="return false;">
+    <div id="app"></div>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-DJ2+sosWB5FnZAIeCWAHu2gxQ7Gi438oOZLcBQSOrW8gD0s7LIXDv/5RW76B3FcljF40BXnfqNIo6Dhp7dFHJg=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js"></script>
 
-<body oncontextmenu="return false;">
-	<div class="container-fluid">
-		<div class="my-4 text-center">
-			<h2>ATP Designer</h2>
-		</div>
-		<div class="my-4 text-center">
-			<a class="btn btn-success" href="javascript:window.open('simulator.html'+location.hash);">시뮬레이터</a>
-			<a class="btn btn-primary" href="javascript:new_project();">새 프로젝트</a>
-			<a class="btn btn-primary" href="javascript:choose_file();">프로젝트 불러오기</a>
-			<a class="btn btn-primary" href="javascript:save_project();">프로젝트 저장하기</a>
-			<a class="btn btn-warning" href="javascript:check_quota();">남은 저장공간 확인</a>
-			<a class="btn btn-primary" href="javascript:export_data();">익스포트</a>
-		</div>
-		<div class="my-1 text-center">
-			<h4 id="message-box">&nbsp;</h4>
-		</div>
-		<div class="my-4 text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-3">
-						<p>디자이너 크기</p>
-						<select class="custom-select" onchange="change_led_view(this);">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
-							<option>13</option>
-							<option>14</option>
-							<option>15</option>
-							<option>16</option>
-							<option>17</option>
-							<option>18</option>
-							<option>19</option>
-							<option>20</option>
-							<option>21</option>
-							<option>22</option>
-							<option>23</option>
-							<option>24</option>
-							<option>25</option>
-							<option>26</option>
-							<option>27</option>
-							<option>28</option>
-							<option>29</option>
-							<option>30</option>
-							<option>31</option>
-							<option>32</option>
-							<option>33</option>
-							<option>34</option>
-							<option>35</option>
-							<option>36</option>
-							<option>37</option>
-							<option>38</option>
-							<option>39</option>
-							<option>40</option>
-							<option>41</option>
-							<option>42</option>
-							<option>43</option>
-							<option>44</option>
-							<option>45</option>
-							<option>46</option>
-							<option>47</option>
-							<option>48</option>
-							<option>49</option>
-							<option selected>50</option>
-							<option>51</option>
-							<option>52</option>
-							<option>53</option>
-							<option>54</option>
-							<option>55</option>
-							<option>56</option>
-							<option>57</option>
-							<option>58</option>
-							<option>59</option>
-							<option>60</option>
-							<option>61</option>
-							<option>62</option>
-							<option>63</option>
-							<option>64</option>
-							<option>65</option>
-							<option>66</option>
-							<option>67</option>
-							<option>68</option>
-							<option>69</option>
-							<option>70</option>
-							<option>71</option>
-							<option>72</option>
-							<option>73</option>
-							<option>74</option>
-							<option>75</option>
-							<option>76</option>
-							<option>77</option>
-							<option>78</option>
-							<option>79</option>
-							<option>80</option>
-						</select>
-					</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" type="text/javascript"></script>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 
-					<div class="col-3">
-						<p>타임라인 크기</p>
-						<select class="custom-select" onchange="change_timeline(this);">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option selected>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
-							<option>13</option>
-							<option>14</option>
-							<option>15</option>
-							<option>16</option>
-							<option>17</option>
-							<option>18</option>
-							<option>19</option>
-							<option>20</option>
-						</select>
-					</div>
-
-					<div class="col-3">
-						<p>LED 줄 개수</p>
-						<select class="custom-select" onchange="change_ch(this);">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
-							<option>13</option>
-							<option>14</option>
-							<option>15</option>
-							<option selected>16</option>
-						</select>
-					</div>
-					<div class="col-3">
-						<p>LED 최대 갯수</p>
-						<select class="custom-select" onchange="change_max(this);">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							<option>9</option>
-							<option>10</option>
-							<option>11</option>
-							<option>12</option>
-							<option>13</option>
-							<option>14</option>
-							<option>15</option>
-							<option>16</option>
-							<option>17</option>
-							<option>18</option>
-							<option>19</option>
-							<option>20</option>
-							<option>21</option>
-							<option>22</option>
-							<option>23</option>
-							<option>24</option>
-							<option>25</option>
-							<option>26</option>
-							<option>27</option>
-							<option>28</option>
-							<option>29</option>
-							<option>30</option>
-							<option>31</option>
-							<option>32</option>
-							<option>33</option>
-							<option>34</option>
-							<option>35</option>
-							<option>36</option>
-							<option>37</option>
-							<option>38</option>
-							<option>39</option>
-							<option>40</option>
-							<option>41</option>
-							<option>42</option>
-							<option>43</option>
-							<option>44</option>
-							<option>45</option>
-							<option>46</option>
-							<option>47</option>
-							<option>48</option>
-							<option>49</option>
-							<option selected>50</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="text-center">
-			<table id="designer"></table>
-		</div>
-	</div>
-	<div id="color_pallet" class="ATPBox" led_color='r' led_bright='31'>
-		<p>100 %</p>
-	</div>
-	<div id="select_pallet"></div>
-	<input id="theFile" type="file" style="display:none;" accept=".json" onchange="onFileChoose(this)" />
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
-	<script scr="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-	<script src="atp.js"></script>
-	<script src="atp-func.js"></script>
-	<script src="atp-core.js"></script>
-	<script src="atp-user.js"></script>
-
-</body>
-
+    <script src="./src/app.ts" type="module"></script>
+  </body>
 </html>
